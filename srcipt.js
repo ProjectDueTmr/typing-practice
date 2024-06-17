@@ -4,7 +4,11 @@ const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput') 
 
 quoteInputElement.addEventListener('input', () => {
-    
+    const arryaQuote = quoteDisplayElement.querySelectorAll('span')
+    const arrayValue = quoteInputElement.value.split('')
+    arrayQuote.forEach((characterSpan, index) => {
+
+    })
 } )
 
 
