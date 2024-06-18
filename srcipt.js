@@ -4,10 +4,20 @@ const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput') 
 
 quoteInputElement.addEventListener('input', () => {
-    const arryaQuote = quoteDisplayElement.querySelectorAll('span')
+    const arrayQuote = quoteDisplayElement.querySelectorAll('span')
     const arrayValue = quoteInputElement.value.split('')
     arrayQuote.forEach((characterSpan, index) => {
-
+        const character = arrayValue[index]
+        if(character == null) {
+            characterSpan.classList.remove('incorrect')
+            characterSpan.classList.remove('correct')
+        } else if(character === characterSpan.innerText) {
+            characterSpan.classList.add('correct');
+            characterSpan.classList.remove('incorrect');
+            } else {
+                characterSpan.classList.remove('correct');
+                characterSpan.classList.add('incorrect');
+        }
     })
 } )
 

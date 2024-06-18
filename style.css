@@ -21,6 +21,7 @@ body, .quote-input{
     border-radius: .5rem;
     width: 700px;
     max-width: 90%;
+    font-size: 2rem
 }
 
 .timer{
